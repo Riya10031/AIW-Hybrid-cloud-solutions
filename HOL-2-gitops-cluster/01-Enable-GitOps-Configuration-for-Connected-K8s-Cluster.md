@@ -79,17 +79,10 @@ In this exercise, you will be performing the following tasks:
  1. Run the below commands to upgrade the az packages and az module. Make sure to run each command one at a time
    
       ```
-      apt update -y
-      apt install curl -y
-      apt install pip
-      curl -sS https://bootstrap.pypa.io/pip/3.8/get-pip.py -o get-pip.py
-      python3 get-pip.py
-      # Upgrade pip globally (for current Python version, e.g., 3.8+)
-      python3 -m pip install --upgrade pip      
-      python3 -m pip install --upgrade pip --target /opt/az/lib/python3.8/site-packages/
-      python3 -m pip install azure-common
-      az upgrade --yes
-      init 6 #TO restart
+      apt update -y && apt install -y curl python3-full python3-pip pipx
+      curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+      pipx install azure-common
+      systemctl reboot
       ```
 
 1. Open a new **Putty** session, re-perform the steps from step 2 to step 6 of the same task to get the upgraded packages and then continue from step 9.
@@ -109,16 +102,12 @@ In this exercise, you will be performing the following tasks:
 1. Run the below commands one after the other to update the kubernate version.    
 
    ```
-   sudo microk8s stop
    sudo snap remove microk8s
-   sudo snap install microk8s --classic --channel=1.33/stable
-
-   ```
-
-   ```
-   microk8s start
-   microk8s status --wait-ready
-   microk8s enable dns
+   sudo snap install microk8s --classic --channel=1.31/stable
+   sudo microk8s start
+   sudo microk8s status --wait-ready
+   sudo microk8s enable dns
+   sudo microk8s config view > ~/.kube/microk8s
    ```
 
     ![](.././media/arc72.png "azlogin")   
@@ -126,12 +115,6 @@ In this exercise, you will be performing the following tasks:
      > **Note:** Wait until the first command runs successfully. This may take around **10–15 minutes**. Then, run the second command, which can take approximately **15–20 minutes** to complete.
 
      > **Note:** If `microk8s status --wait-ready` takes more than **20–30 minutes** to execute, press **Ctrl+Z** to terminate it and proceed further.
-
-1. Run the below command to Export MicroK8s cluster kubeconfig file path.
-
-   ```
-   microk8s config view > ~/.kube/microk8s
-   ```
 
 1. Run the below command to enable automatic installation of missing Azure CLI extensions, including preview extensions.
 
@@ -187,7 +170,6 @@ In this exercise, you will be performing the following tasks:
    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="7af13c5d-edd3-49ed-b826-79a1f76e2512" />
-
 
 ## Task 3: Validate the FluxConfiguration - Read Only
 
