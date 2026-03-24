@@ -123,6 +123,12 @@ In this exercise, you will be performing the following tasks:
    az config set extension.dynamic_install_allow_preview=true
    ```
 
+1. Run the following command to bypass the Certificate validation.
+
+   ```
+   sed -i 's/certificate-authority-data:.*/insecure-skip-tls-verify: true/' ~/.kube/microk8s
+   ```
+
 1. Run the below command to Connect the cluster to Azure Arc
 
    ```
