@@ -2,9 +2,11 @@
 
 ### Estimated Duration: 180 Minutes
 
+## Overview
+
 In this exercise, you will be deploying an Azure Local solution using a generated ARM template. You can deploy it either through the Azure portal by uploading the template and specifying deployment parameters or using PowerShell for automated deployment, offering flexibility and control over the deployment process. Here, you will be deploying Azure Local using PowerShell commands.
 
-## Lab Objectives
+## Objectives
 
 You will be able to complete the following tasks:
 
@@ -39,7 +41,7 @@ In this task, you will review the pre-generated ARM template and parameter files
 
     ![](./media/lab02a2.png)
 
-1. Once the PowerShell is ready, run the below commands to register the required Resource Providers.
+1. Once PowerShell is ready, run the commands below to register the required Resource Providers.
 
    >**Note:** It will take 2-3 minutes to get registered.
 
@@ -85,7 +87,7 @@ In this task, you will review the pre-generated ARM template and parameter files
 
 1. Similarly, on the Resource Providers page, search for **Hybrid**, select **Microsoft.HybridContainerService**, then click on **Register.**
 
-    >**Note:** If it is already registered please ignore. You can verify all Resource Providers here to ensure they are registered successfully.
+    >**Note:** If it is already registered, please ignore. You can verify all Resource Providers here to ensure they are registered successfully.
 
     ![](./media/Ex2-14.png)     
 
@@ -123,7 +125,7 @@ In this task, you will review the pre-generated ARM template and parameter files
 
 In this task, you will validate and deploy the Azure Local cluster using PowerShell with the pre-configured ARM template and parameter files.
 
-1. Open Windows PowerShell ISE window and run the below command to validate your Azure Local deployment and cluster.
+1. Open Windows PowerShell ISE window and run the command below to validate your Azure Local deployment and cluster.
 
    ```
    $TemplateFile = Join-Path -Path $env:LocalBoxDir -ChildPath "azlocal.json"
@@ -134,7 +136,7 @@ In this task, you will validate and deploy the Azure Local cluster using PowerSh
 
 1. The above command will take approximately 45 minutes to get your deployment validated and show you the Azure Local cluster on the Azure Portal.
 
-    >**Note:** If the deployments fails run the below commands and then restart the VM and again run the code in **Step-1**
+    >**Note:** If the deployments fail, run the below commands and then restart the VM and again run the code in **Step-1**
 
     ```
     Install-WindowsFeature -Name Hyper-V,Failover-Clustering,RSAT-Clustering-PowerShell -IncludeManagementTools
@@ -148,7 +150,7 @@ In this task, you will validate and deploy the Azure Local cluster using PowerSh
    New-AzResourceGroupDeployment -Name 'localcluster-deploy' -ResourceGroupName $env:resourceGroup -TemplateFile $TemplateFile -deploymentMode "Deploy" -TemplateParameterFile $TemplateParameterFile -OutVariable ClusterDeployment -ErrorAction Stop
    ```
 
-1. Once the deployment starts, you can navigate to the **Azure Portal**, in search bar type **Resource groups (1)** and select **Resource groups (2)** under the services. 
+1. Once the deployment starts, you can navigate to the **Azure Portal**, in the search bar type **Resource groups (1)** and select **Resource groups (2)** under the services. 
 
     ![](media/Ex3-0.png)
 
