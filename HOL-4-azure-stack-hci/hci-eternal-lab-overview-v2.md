@@ -6,7 +6,7 @@
 
 **LocalBox** is a turnkey solution that delivers a fully integrated sandbox for exploring **Azure Local** capabilities and hybrid cloud integration within a virtualized environment. Purpose-built to operate entirely within a single Azure subscription and resource group, LocalBox provides a streamlined way for users to gain hands-on experience with **Azure Local** and **Azure Arc** technologies without requiring dedicated physical hardware. 
 
-With the general availability of **Azure Local 23H2**, the platform introduces simplified configuration and deployment of Azure Local instances, including enhanced support for virtual machine (VM) self-service management directly through the Azure portal. LocalBox has been updated to align with this release, offering Azure Local instances based on the new 23H2 operating system. Previous versions of Azure Local are no longer included in LocalBox, ensuring users always work with the latest capabilities.
+With the general availability of **Azure Local 24H2**, the platform introduces simplified configuration and deployment of Azure Local instances, including enhanced support for virtual machine (VM) self-service management directly through the Azure portal. LocalBox has been updated to align with this release, offering Azure Local instances based on the new 24H2 operating system. Previous versions of Azure Local are no longer included in LocalBox, ensuring users always work with the latest capabilities.
 
 ## Azure Local capabilities available in LocalBox
 
@@ -26,7 +26,7 @@ Azure Local includes [AKS enabled by Azure Arc](https://learn.microsoft.com/azur
 
 ## LocalBox Azure Consumption Costs
 
-LocalBox resources incur Azure consumption charges based on the underlying services, such as compute, storage, networking, and other associated components. These costs may vary depending on the Azure region where LocalBox is deployed. To avoid unnecessary charges, it's important to monitor your LocalBox deployments and disable or delete resources when they are not in use. Please see the [Jumpstart LocalBox FAQ](../faq/) for more information on consumption costs.
+LocalBox resources incur Azure consumption charges based on the underlying services, such as compute, storage, networking, and other associated components. These costs may vary depending on the Azure region where LocalBox is deployed. To avoid unnecessary charges, it's important to monitor your LocalBox deployments and disable or delete resources when they are not in use. Please see the [Jumpstart LocalBox FAQ](https://jumpstart.azure.com/azure_jumpstart_localbox/faq) for more information on consumption costs.
 
 ## Objective
 
@@ -130,29 +130,24 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
    ```
    https://portal.azure.com/
    ``` 
- 
-1. On the **Sign into Microsoft Azure** tab, you will see the login prompt. Enter the following **Email/Username**, and then click on **Next (2)**. 
-      
-    - Email/Username: **<inject key="AzureAdUserEmail"></inject> (1)**
+
+1. On the **Sign in** blade, you will see a login screen, in which enter the following email/username and password and then click on **Sign in**.  
+
+   * **Azure Username/Email**:  <inject key="AzureAdUserEmail"></inject> 
+
+        ![](./media/signin1-0903.png) 
+
+   * **Temperory Access Pass**:  <inject key="AzureAdUserPassword"></inject>
   
-      ![](./media/GettingStarted-4.png)
-   
-1. Now, enter the **password** that you have already received for the above account, then click on **Sign in (2).**
-      
-    - Password: **<inject key="AzureAdUserPassword"></inject> (1)**
+        ![](./media/signin2-0903.png)
   
-      ![](./media/GettingStarted-5.png)
+1. If you see the pop-up **Stay Signed in?** click **Yes**.
 
-1. On the **Action Required** pop-up click on **Ask later**.
+    ![](./media/g3.png)
 
-   ![](./media/MFA.png)
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
-   > **Note**: If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)     
-1. If you see the pop-up **Stay signed in?** Click **No**.
-
-   ![](./media/GettingStarted-6.png)
-
-1. If the **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+    ![](./media/g4.png)
 
 1. On the **Azure portal**, in search bar type **Resource groups (1)** and select **Resource groups (2)** under the services. 
 
@@ -161,34 +156,6 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 1. From the **Resource** groups pane, click on the **Azure-Local** resource group and verify the resources present in it.
 
    ![](media/azurestackhci-rga.png "Select Azure Local Resource Group")
-
-## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
-
-   > **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-    - Open **Google Play Store** (Android) or **App Store** (iOS).
-    - Search for **Microsoft Authenticator** and tap **Install**.
-    - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-       
-1. If prompted to stay signed in, you can click **No**.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
- 
-1. Now, click on the **Next** from the lower right corner to move to the next page.
 
 ## Support Contact
  
