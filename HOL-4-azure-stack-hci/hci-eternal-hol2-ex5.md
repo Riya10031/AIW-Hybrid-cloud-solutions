@@ -20,33 +20,33 @@ In this task, you will perform updates on the localboxcluster Azure Local resour
 
    ![](media/Ex3-0.png)
 
-2. From the Resource groups pane, click on **Azure-Local** resource group and verify the resources present in it.
+1. From the Resource groups pane, click on **Azure-Local** resource group and verify the resources present in it.
 
    ![](media/azurestackhci-rga.png "Select Azure Local Resource Group")
 
-3. In the  **Azure-Local** resource group in the search bar search for **localboxcluster** **(1)** and select **localboxcluster** **(2)** Azure Local.
+1. In the  **Azure-Local** resource group in the search bar search for **localboxcluster** **(1)** and select **localboxcluster** **(2)** Azure Local.
 
    ![](media/Ex3-1.png)
 
-2. In the Azure Local page, select **Updates (1)** under **Operations** from left menu, click on **Install now (2)**.
+1. In the Azure Local page, select **Updates (1)** under **Operations** from left menu, click on **Install now (2)**.
 
    ![](media/E5T1S4.png)
 
-4. In the Install updates pane from Azure Update manager, verify the available updates and click on **Next**.
+    >**Note**: If the **Status** is already shown as **Up to date**, the Install now option will not be available. In such cases, please review the following steps to understand the update process and how updates are applied to Azure Local environments.
+
+1. In the Install updates pane from Azure Update manager, verify the available updates and click on **Next**.
 
    ![](media/ex5-3-1.png)
-
-   >**Note**: If the **Status** is already shown as **Up to date**, the Install now option will not be available. In such cases, please review the following steps to understand the update process and how updates are applied to Azure Local environments.
   
-6. From the Review + install pane, review the selected updates and click on **Install**.
+1. From the Review + install pane, review the selected updates and click on **Install**.
 
    ![](media/Ex5-1-1.png)
 
-7. You will see a notification that **Installation started on 1 Azure Local systems**. Also, you will be able to see the In-progress status from the Updates pane.
+1. You will see a notification that **Installation started on 1 Azure Local systems**. Also, you will be able to see the In-progress status from the Updates pane.
 
    ![](media/hci24-16.1a-1.png)
 
-8. Updating the Azure Local Cluster will take around 2 Hours. Once it's updated successfully, you will be able to see the status as **Up to date** and the update readiness as **Healthy** as shown in the screenshot below.
+1. Updating the Azure Local Cluster will take around 2 Hours. Once it's updated successfully, you will be able to see the status as **Up to date** and the update readiness as **Healthy** as shown in the screenshot below.
 
    ![](media/Ex5-2-1.png)
 
