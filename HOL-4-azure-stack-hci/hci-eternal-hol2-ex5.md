@@ -32,7 +32,7 @@ In this task, you will perform updates on the localboxcluster Azure Local resour
 
    ![](media/E5T1S4.png)
 
-### 🔴 Note: If the **Status** is already shown as **Up to date**, the Install now option will not be available. In such cases, please review the following steps to understand the update process and how updates are applied to Azure Local environments.
+### 📌 Note: If the **Status** is already shown as **Up to date**, the Install now option will not be available. In such cases, please review the following steps to understand the update process and how updates are applied to Azure Local environments.
 
 5. In the Install updates pane from Azure Update manager, verify the available updates and click on **Next**.
 
