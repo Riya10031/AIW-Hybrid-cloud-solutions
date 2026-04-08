@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 60 Minutes
 
-### Please note that this lab has already been performed in the lab environment, but please go through the steps to get familiar.
+### Please note that this exercise has already been performed in the lab environment, but please go through the steps to get familiar.
 
 ## Overview
 
