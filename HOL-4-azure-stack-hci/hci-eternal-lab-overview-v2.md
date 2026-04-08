@@ -1,4 +1,4 @@
-# Hybrid Cloud Solution - Azure Local
+# Azure Local - Hands on lab
 
 ### Overall Estimated Duration: 8 Hours
 
