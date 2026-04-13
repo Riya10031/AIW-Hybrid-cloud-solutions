@@ -15,28 +15,29 @@ In this exercise, you will be performing the following tasks:
 - Task 05: Make changes to cluster declarations in the Git repo - **Read Only**
 - Task 06: Verify changes are deployed to the cluster - **Read Only**
 
-
 ## Task 1: Fork the GitHub Arc K8s demo repository
 
-1. Launch the following GitHub repository URL ```https://github.com/CloudLabsAI-Azure/arc-k8s-demo```. In the upper right corner you will see **Sign in** and **Sign up** options, if you already have a github account then click on **Sign in**, otherwise **Sign up**.
+In this task, you will create a personal copy (fork) of the public arc-k8s-demo GitHub repository. This will serve as the source for your GitOps deployment, allowing changes in your repo to reflect automatically in the connected Kubernetes cluster
 
-   ![](.././media/01.png)
+1. Launch the following GitHub repository URL ```https://github.com/CloudLabsAI-Azure/arc-k8s-demo```. In the upper right corner, you will see **Sign in (1)** and **Sign up (2)** options. If you already have a github account, then click on **Sign in**, otherwise **Sign up**.
+
+   ![](.././media/new/9.png)
    
 1. If you click on **Sign in**, You will be prompted to provide your **Github Username/email address (1)** and Password (2) then click on **Sign in (3)**
    
    ![](.././media/hybrid47.png)
    
-1. Then you will recieve an **device verfication code** to your email, enter that code **(1)** and then click on **Verify (2)**.
+1. Then you will receive an **device verification code** to your email, enter that code **(1)** and then click on **Verify (2)**.
 
    ![](.././media/arc28.png)
    
 1. Now, from the upper right corner, click on the **Fork** to fork the repository to your GitHub account.
 
-   ![](.././media/02.png)
+   ![](.././media/new/a1.png)
    
-1. On **Create a new fork**, disable the **Copy the master branch only (1)** and click **Create fork(2).**
+1. On **Create a new fork**, uncheck the **Copy the** `master` **branch only (1)** and click **Create fork (2).**
    
-   ![](.././media/hybrid48.png)   
+   ![](.././media/new/a2.png)  
 
 ## Task 2: Deploy App using az k8sconfiguration
 
@@ -148,9 +149,8 @@ In this exercise, you will be performing the following tasks:
    ```
    az k8s-configuration flux create -g $ResourceGroup -c microk8s-cluster -n cluster-config -t connectedClusters --scope cluster --namespace cluster-config -u https://github.com/<githubusername>/arc-k8s-demo --branch master --kustomization name=cluster-config-kustomization
    ```
-
-
-    >**Note**: Enter `Y` to `The command requires extension k8s-configuration, Do you want to install`.   
+   
+   >**Note**: Enter `Y` to `The command requires extension k8s-configuration, Do you want to install`.   
 
 1. Replace as mentioned below and run the command in ubuntu-k8s VM SSH session that is opened in putty:
    
